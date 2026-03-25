@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zikhal Security Services | Protection Is Our Identity</title>
+    <style>
+        /* === CSS STYLES === */
+        :root {
+            --primary-blue: #003366;
+            --secondary-blue: #0055a5;
+            --accent-blue: #4da6ff;
+            --white: #ffffff;
+            --light-gray: #f4f7f6;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 5px;
+            font-weight: 600;
+            border: 2px solid var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--secondary-blue);
+            font-weight: 600;
+            margin-bottom: 40px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        /* === HEADER === */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: var(--secondary-blue); }
+
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .nav-links a:hover { color: var(--secondary-blue); }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.7)), url('hero-security.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* === ABOUT SECTION === */
+        .about { background-color: var(--white); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .about-text p { margin-bottom: 20px; color: var(--text-light); }
+
+        .accreditation-box {
+            background: linear-gradient(135deg, var(--light-gray) 0%, #e8eef5 100%);
+            padding: 25px;
+            border-left: 5px solid var(--primary-blue);
+            margin-top: 25px;
+            border-radius: 5px;
+        }
+
+        .accreditation-box strong { color: var(--primary-blue); }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,51,102,0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box h3 { font-size: 2.5rem; margin-bottom: 5px; }
+        .stat-box p { font-size: 0.9rem; opacity: 0.9; }
+
+        /* === SERVICES SECTION === */
+        .services {
+            background: linear-gradient(180deg, var(--light-gray) 0%, var(--white) 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,51,102,0.15);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary-blue);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p { color: var(--text-light); font-size: 0.95rem; }
+
+        .service-feature-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .service-feature-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,51,102,0.15);
+        }
+
+        /* === VALUES SECTION === */
+        .values {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .values .section-title { color: var(--white); }
+
+        .values-intro {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .values-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            background: rgba(255,255,255,0.15);
+            padding: 25px 45px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .value-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.05);
+        }
+
+        .aims-list {
+            max-width: 800px;
+            margin: 50px auto 0;
+            text-align: left;
+        }
+
+        .aims-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .aims-list li::before {
+            content: '✓';
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* === MANAGEMENT SECTION === */
+        .management { background-color: var(--white); }
+
+        .ownership-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            margin: 10px 5px;
+            font-weight: 600;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 35px 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .team-card:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(0,51,102,0.1);
+            transform: translateY(-5px);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .team-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .team-card .position {
+            color: var(--secondary-blue);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .team-card .ownership {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .management-structure {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .management-structure h3 {
+            text-align: center;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .org-level {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .org-box {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        /* === CONTACT SECTION === */
+        .contact {
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .contact-info-box h4 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info-box p { color: var(--text-light); }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .contact-form textarea { resize: vertical; min-height: 150px; }
+
+        .contact-form button {
+            width: 100%;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .banking-details {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .banking-details h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .banking-details p {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #003366 100%);
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-section a:hover { color: var(--accent-blue); }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 992px) {
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .hamburger { display: block; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .values-grid { gap: 15px; }
+            .value-item { padding: 20px 30px; }
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ZIKHAL <span>SECURITY</span></div>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#values">Values</a></li>
+                    <li><a href="#team">Management</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Protection Is Our Identity</h1>
+            <p>Zikhal Security Services (PTY) LTD - BBBEE Level 1 & PSIRA Accredited Security Solutions Provider Since 2021</p>
+            <a href="#contact" class="btn">Get a Quote</a>
+            <div class="hero-badges">
+                <span class="badge">✓ PSIRA Accredited</span>
+                <span class="badge">✓ BBBEE Level 1</span>
+                <span class="badge">✓ 100% Black Owned</span>
+                <span class="badge">✓ SASSETA Accredited</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">About Us</h2>
+                    <span class="section-subtitle">Established 2021 | Registration: 2021/666486/07</span>
+                    <h3>Professional Security Solutions</h3>
+                    <p>Zikhal Security Service is a BBBEE Level 1 company which has served a wide range of clients from virtually every industry, including multinational businesses, and clients from the mining and hospitality industries.</p>
+                    <p>ZSS Security Officers are meticulously screened and well trained. They provide services to various private companies and public entities. These hand-picked officers are trained in basic security functions, professional attitude and appearance, public relations and crisis management, as well as first aid.</p>
+                    <p>ZSS maintains a high client retention rate that is due to the ability to understand, interpret and exceed client expectations in ensuring the placement of competent and committed officers and supervisors.</p>
+                    
+                    <div class="accreditation-box">
+                        <strong>🏆 Accreditation & Partners:</strong><br><br>
+                        ✓ PSIRA Accredited Security Provider<br>
+                        ✓ TSU Training Solution's Partner<br>
+                        ✓ SASSETA, SAPS, PFTC, City & Guilds, HABC Accredited<br>
+                        ✓ TSU Group Holdings Affiliate
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="control-center.jpg" alt="Zikhal Security Control Center">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h3>2021</h3>
+                            <p>Year Established</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Level 1</h3>
+                            <p>BBBEE Rating</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>100%</h3>
+                            <p>Black Owned</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>23+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Services We Offer</h2>
+                <span class="section-subtitle">Comprehensive Security Solutions for Every Need</span>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Static Guarding</h3>
+                    <p>Highly competent dedicated officers for corporations, private sector, residential home functions and events nationwide. Professional attitude and appearance guaranteed.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🖥️</span>
+                    <h3>24/7 Control Centre</h3>
+                    <p>Real-time monitoring of security officers via Guard monitoring system (Sentinel) with full audit trails. Constant communication between all units.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🚨</span>
+                    <h3>Tactical Response</h3>
+                    <p>Advanced vehicle tracking and tactical support units responding to critical situations. Professionally trained in tactical training, fire prevention, first aid.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔍</span>
+                    <h3>Investigations & Polygraph</h3>
+                    <p>Expert investigators trained in Forensic Psycho-physiology. Pre-employment vetting, theft, fraud, infidelity testing. American Polygraph Association affiliated.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">📱</span>
+                    <h3>TSU Protect App</h3>
+                    <p>Mobile panic button linked to 24/7 Monitoring Centre. Features: Man Down, Journey, Meeting Alarm, Report, Bluetooth Panic Button. ER24 Emergency Medical Response.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">👥</span>
+                    <h3>Riot & Crowd Control</h3>
+                    <p>SASSETA accredited training in crowd dynamics, communication channels, and public order management. 5-7 day certified courses available.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔔</span>
+                    <h3>Alarm Systems</h3>
+                    <p>Installation of residential/business alarm systems (Ajax, Hikvision, Paradox) with motion detectors, glass break detectors, and panic buttons.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🧹</span>
+                    <h3>Cleaning Services</h3>
+                    <p>Professional cleaning for residential, commercial, or industrial sectors with eco-friendly products, 24/7 availability, and SHEQ compliance.</p>
+                </div>
+            </div>
+
+            <div class="service-feature-image">
+                <img src="alarm-system.jpg" alt="Security Alarm Systems Technology" style="max-width: 800px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="section-padding values">
+        <div class="container text-center">
+            <h2 class="section-title">Values & Aims</h2>
+            <p class="values-intro">Our Mission: To strive towards perfection and to be recognised as the leader in security solutions.</p>
+            
+            <div class="values-grid">
+                <div class="value-item">⭐ Commitment</div>
+                <div class="value-item">⭐ Faithfulness</div>
+                <div class="value-item">⭐ Integrity</div>
+                <div class="value-item">⭐ Competence</div>
+                <div class="value-item">⭐ Passion</div>
+            </div>
+
+            <div class="aims-list">
+                <h3 style="color: white; margin-bottom: 20px; text-align: center;">Our Aims & Objectives</h3>
+                <ul>
+                    <li>To eradicate and alleviate poverty by creating more job opportunities and establishing more businesses nationwide</li>
+                    <li>To work towards improving skills and creativity continually within the organisation and to be innovative, advance and updated</li>
+                    <li>To become one of the instruments to decrease crime level in our country by employing many people</li>
+                    <li>To generate income for a living and to help many poverty stricken people nationwide</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Section -->
+    <section id="team" class="section-padding management">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Management Profiles</h2>
+                <span class="section-subtitle">100% Black Owned Enterprise</span>
+                <div>
+                    <span class="ownership-badge">🏆 100% Black Owned</span>
+                    <span class="ownership-badge">🏆 BBBEE Level 1</span>
+                    <span class="ownership-badge">🏆 5 Directors</span>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">RZ</div>
+                    <h4>Richard B. Zikhali</h4>
+                    <span class="position">Managing Director</span>
+                    <p class="ownership">27.5% Ownership</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">23+ years experience in Security Development & CCTV surveillance services</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">SZ</div>
+                    <h4>Siphiwe E. Zikhali</h4>
+                    <span class="position">Managing Director</span>
+                    <p class="ownership">27.5% Ownership</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Young aspiring entrepreneur, mentored by Mr. Richard Zikhali</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">NZ</div>
+                    <h4>Nhlanhla L. Zikhali</h4>
+                    <span class="position">Chief Executive Officer</span>
+                    <p class="ownership">15% Ownership</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Degree in Business Management Studies, 2+ years as CEO</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">NM</div>
+                    <h4>Nontobeko I. Mtshali</h4>
+                    <span class="position">Financial Director</span>
+                    <p class="ownership">15% Ownership</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Background in Accounting, Degree in Teaching</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">SM</div>
+                    <h4>Sanele Mazibuko</h4>
+                    <span class="position">Production Manager</span>
+                    <p class="ownership">15% Ownership</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Degree in Biological Science, Administrative Support expertise</p>
+                </div>
+            </div>
+
+            <div class="management-structure">
+                <h3>📊 Management Structure</h3>
+                <div class="org-chart">
+                    <div class="org-level">
+                        <div class="org-box">Managing Director<br>R.B. Zikhali</div>
+                        <div class="org-box">Managing Director<br>S.E. Zikhali</div>
+                    </div>
+                    <div class="org-level">
+                        <div class="org-box">CEO<br>L.N. Zikhali</div>
+                        <div class="org-box">Financial Director<br>N.I. Mtshali</div>
+                        <div class="org-box">Production Manager<br>S. Mazibuko</div>
+                    </div>
+                    <div class="org-level">
+                        <div class="org-box">PR Manager</div>
+                        <div class="org-box">Control Officer</div>
+                        <div class="org-box">Safety Officer</div>
+                        <div class="org-box">Marketing Manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Contact Us</h2>
+                <span class="section-subtitle">Get In Touch Today for a Free Quote</span>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-box">
+                        <h4>📍 Physical Address</h4>
+                        <p>10656 Ballengiech Street, Bosworth Farm, Newcastle, 2940</p>
+                    </div>
+                    <div class="contact-info-box">
+                        <h4>📧 Email Addresses</h4>
+                        <p>zzikhal314@gmail.com</p>
+                        <p>rbnoknosi@gmail.com</p>
+                        <p>sphiwzikhali23@gmail.com</p>
+                    </div>
+                    <div class="contact-info-box">
+                        <h4>📞 Phone Numbers</h4>
+                        <p>Richard: +27 73 708 0164</p>
+                        <p>Siphiwe: +27 67 145 7890</p>
+                        <p>Nhlanhla: +27 65 671 3771</p>
+                        <p>Sanele: +27 71 046 7408</p>
+                        <p>Nontobeko: +27 71 408 8019</p>
+                    </div>
+
+                    <div class="banking-details">
+                        <h4>🏦 Banking Details</h4>
+                        <p><strong>Bank:</strong> Tyme Bank</p>
+                        <p><strong>Account Name:</strong> Zikhal Security Services</p>
+                        <p><strong>Branch Code:</strong> 678910</p>
+                        <p><strong>Account Number:</strong> 53001073615</p>
+                        <p><strong>Account Type:</strong> Cheque</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="quoteForm">
+                        <input type="text" placeholder="Your Full Name *" required>
+                        <input type="email" placeholder="Your Email Address *" required>
+                        <input type="tel" placeholder="Your Phone Number *" required>
+                        <select required>
+                            <option value="">Select Service Required *</option>
+                            <option value="Static Guarding">Static Guarding</option>
+                            <option value="Control Centre">24/7 Control Centre</option>
+                            <option value="Tactical Response">Tactical Response</option>
+                            <option value="Investigations">Investigations & Polygraph</option>
+                            <option value="TSU Protect">TSU Protect App</option>
+                            <option value="Crowd Control">Riot & Crowd Control</option>
+                            <option value="Alarm Systems">Alarm Systems</option>
+                            <option value="Cleaning">Cleaning Services</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <textarea placeholder="Your Message / Requirements *" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ZIKHAL SECURITY</h4>
+                    <p>Protection Is Our Identity</p>
+                    <p>BBBEE Level 1 | PSIRA Accredited</p>
+                    <p>100% Black Owned</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#services">Static Guarding</a>
+                    <a href="#services">Control Centre</a>
+                    <a href="#services">Tactical Response</a>
+                    <a href="#services">Alarm Systems</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company Info</h4>
+                    <p>Reg: 2021/666486/07</p>
+                    <p>Tax: 9735250186</p>
+                    <p>CIPC: 60010824531</p>
+                    <p>VAT: In Process</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zikhal Security Services (PTY) LTD. All Rights Reserved.</p>
+                <p>Reference: Lexcorp Mzilankatha Hardware (PTY) - Mr B Mzilankatha: 065 372 5176</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form Submission Handler
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting Zikhal Security Services! We will respond to your inquiry within 24 hours.');
+            this.reset();
+        });
+
+        // Sticky Header Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.15)";
+            } else {
+                header.style.boxShadow = "0 2px 15px rgba(0,0,0,0.1)";
+            }
+        });
+
+        // Scroll Animation for Elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to service cards and team cards
+        document.querySelectorAll('.service-card, .team-card, .value-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Active Navigation Highlight
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLi = document.querySelectorAll('.nav-links li a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(li => {
+                li.style.color = 'var(--text-dark)';
+                if (li.getAttribute('href').includes(current)) {
+                    li.style.color = 'var(--secondary-blue)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
