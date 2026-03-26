@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zikhal Security Services | Protection Is Our Identity</title>
     <style>
-        /* === CSS STYLES === */
         :root {
             --primary-blue: #003366;
             --secondary-blue: #0055a5;
@@ -66,7 +65,6 @@
             font-size: 1.1rem;
         }
 
-        /* === HEADER === */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -110,7 +108,6 @@
             color: var(--primary-blue);
         }
 
-        /* === HERO SECTION === */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.7)), url('hero-security.jpg');
@@ -158,7 +155,6 @@
             border: 1px solid rgba(255,255,255,0.3);
         }
 
-        /* === ABOUT SECTION === */
         .about { background-color: var(--white); }
 
         .about-grid {
@@ -210,7 +206,6 @@
         .stat-box h3 { font-size: 2.5rem; margin-bottom: 5px; }
         .stat-box p { font-size: 0.9rem; opacity: 0.9; }
 
-        /* === SERVICES SECTION === */
         .services {
             background: linear-gradient(180deg, var(--light-gray) 0%, var(--white) 100%);
         }
@@ -276,7 +271,6 @@
             box-shadow: 0 10px 40px rgba(0,51,102,0.15);
         }
 
-        /* === VALUES SECTION === */
         .values {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
             color: var(--white);
@@ -348,7 +342,6 @@
             font-size: 1.2rem;
         }
 
-        /* === MANAGEMENT SECTION === */
         .management { background-color: var(--white); }
 
         .ownership-badge {
@@ -453,7 +446,6 @@
             min-width: 150px;
         }
 
-        /* === CONTACT SECTION === */
         .contact {
             background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
         }
@@ -530,7 +522,6 @@
             opacity: 0.9;
         }
 
-        /* === FOOTER === */
         footer {
             background: linear-gradient(135deg, #1a1a2e 0%, #003366 100%);
             color: var(--white);
@@ -567,7 +558,6 @@
             font-size: 0.9rem;
         }
 
-        /* === RESPONSIVE === */
         @media (max-width: 992px) {
             .about-grid, .contact-container { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 2.8rem; }
@@ -593,7 +583,6 @@
             .value-item { padding: 20px 30px; }
         }
 
-        /* === ANIMATIONS === */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -613,7 +602,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <nav>
@@ -631,7 +619,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
             <h1>Protection Is Our Identity</h1>
@@ -646,7 +633,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section-padding about">
         <div class="container">
             <div class="about-grid">
@@ -691,7 +677,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="section-padding services">
         <div class="container">
             <div class="text-center">
@@ -748,7 +733,6 @@
         </div>
     </section>
 
-    <!-- Values Section -->
     <section id="values" class="section-padding values">
         <div class="container text-center">
             <h2 class="section-title">Values & Aims</h2>
@@ -774,7 +758,6 @@
         </div>
     </section>
 
-    <!-- Management Section -->
     <section id="team" class="section-padding management">
         <div class="container">
             <div class="text-center">
@@ -787,6 +770,7 @@
                 </div>
             </div>
 
+            <h3 style="text-align: center; color: var(--primary-blue); margin: 40px 0 30px;">Senior Management</h3>
             <div class="team-grid">
                 <div class="team-card">
                     <div class="team-avatar">RZ</div>
@@ -825,6 +809,34 @@
                 </div>
             </div>
 
+            <h3 style="text-align: center; color: var(--primary-blue); margin: 60px 0 30px;">Operations Management</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">TZ</div>
+                    <h4>T. Zikhali</h4>
+                    <span class="position">PR Manager</span>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Public Relations & Communications</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">MZ</div>
+                    <h4>M. Zikhali</h4>
+                    <span class="position">Control Officer</span>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">24/7 Control Centre Operations</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">PZ</div>
+                    <h4>P.R. Zikhali</h4>
+                    <span class="position">Safety Officer</span>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Health & Safety Compliance (SHEQ)</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">LS</div>
+                    <h4>L. Simelane</h4>
+                    <span class="position">Marketing Manager</span>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Business Development & Marketing</p>
+                </div>
+            </div>
+
             <div class="management-structure">
                 <h3>📊 Management Structure</h3>
                 <div class="org-chart">
@@ -838,17 +850,22 @@
                         <div class="org-box">Production Manager<br>S. Mazibuko</div>
                     </div>
                     <div class="org-level">
-                        <div class="org-box">PR Manager</div>
-                        <div class="org-box">Control Officer</div>
-                        <div class="org-box">Safety Officer</div>
-                        <div class="org-box">Marketing Manager</div>
+                        <div class="org-box">PR Manager<br>T. Zikhali</div>
+                        <div class="org-box">Control Officer<br>M. Zikhali</div>
+                        <div class="org-box">Safety Officer<br>P.R. Zikhali</div>
+                        <div class="org-box">Marketing Manager<br>L. Simelane</div>
+                    </div>
+                    <div class="org-level">
+                        <div class="org-box">Bookkeeper<br>L. Zikhali</div>
+                        <div class="org-box">Logistic Manager<br>M.J. Zikhali</div>
+                        <div class="org-box">Accountant<br>V. Nhlapho</div>
+                        <div class="org-box">Senior Admin<br>S. Kubheka</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section-padding contact">
         <div class="container">
             <div class="text-center">
@@ -912,7 +929,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -951,9 +967,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
 
@@ -961,14 +975,12 @@
             navLinks.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
             });
         });
 
-        // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -979,14 +991,12 @@
             });
         });
 
-        // Form Submission Handler
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for contacting Zikhal Security Services! We will respond to your inquiry within 24 hours.');
             this.reset();
         });
 
-        // Sticky Header Effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -996,7 +1006,6 @@
             }
         });
 
-        // Scroll Animation for Elements
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1011,7 +1020,6 @@
             });
         }, observerOptions);
 
-        // Apply animation to service cards and team cards
         document.querySelectorAll('.service-card, .team-card, .value-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
@@ -1019,7 +1027,6 @@
             observer.observe(el);
         });
 
-        // Active Navigation Highlight
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLi = document.querySelectorAll('.nav-links li a');
